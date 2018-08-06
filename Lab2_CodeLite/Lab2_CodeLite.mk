@@ -62,7 +62,7 @@ AS       := C:/mingw64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/up_src_vector_size_capacity.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) 
 
 
 
@@ -93,6 +93,14 @@ PreBuild:
 ##
 ## Objects
 ##
+$(IntermediateDirectory)/up_src_vector_size_capacity.cpp$(ObjectSuffix): ../src/vector/size_capacity.cpp $(IntermediateDirectory)/up_src_vector_size_capacity.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/James/Documents/CodeLite/SoftDev/Lab2/src/vector/size_capacity.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/up_src_vector_size_capacity.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/up_src_vector_size_capacity.cpp$(DependSuffix): ../src/vector/size_capacity.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/up_src_vector_size_capacity.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/up_src_vector_size_capacity.cpp$(DependSuffix) -MM ../src/vector/size_capacity.cpp
+
+$(IntermediateDirectory)/up_src_vector_size_capacity.cpp$(PreprocessSuffix): ../src/vector/size_capacity.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/up_src_vector_size_capacity.cpp$(PreprocessSuffix) ../src/vector/size_capacity.cpp
+
 $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp $(IntermediateDirectory)/main.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/James/Documents/CodeLite/SoftDev/Lab2/Lab2_CodeLite/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.cpp$(DependSuffix): main.cpp
