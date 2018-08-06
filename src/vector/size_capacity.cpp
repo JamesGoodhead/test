@@ -1,6 +1,9 @@
-// size_capacity.cpp
+/*// size_capacity.cpp
 // Vector size versus capacity
 
+
+// The size of a vector indicated the amount of elements in the vector that contain information/ data. The capacity of a vector is the
+// amount of memory that is designated to the vector. When the size equals the capacity the capacity is doubled. 
 #include <vector>
 #include <iostream>
 
@@ -19,4 +22,4 @@ int main()
     }
 
     return 0;
-}
+}*/
