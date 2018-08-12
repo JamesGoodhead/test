@@ -149,6 +149,7 @@ TEST_CASE("Line numbers of a Word appearing in multiple Lines of a Paragraph is 
 	CHECK(paragr_vec.size() == 2);
 	CHECK(paragr_vec[0] == 1); 
 	CHECK(paragr_vec[1] == 3);  
+	// this is a comment
 }
 //
 TEST_CASE("Line numbers returned account for an empty Line") {
@@ -164,19 +165,18 @@ TEST_CASE("Line numbers returned account for an empty Line") {
 	CHECK(paragr_vec.size() == 2);
 	CHECK(paragr_vec[0] == 2);  
 	CHECK(paragr_vec[1] == 3);  
-
 }
-//
-//// Integration test - both Paragraph and File Reader are tested together
-//TEST_CASE("File can be read into Paragraph and successfully searched") {
-//	// make sure that alice.txt is in the right location for this to work!
-//	// it must be in the same directory as the executable
-//	auto filereader = FileReader{"alice.txt"};
-//	auto paragraph = Paragraph{};
-//	filereader.readFileInto(paragraph);
-//
-//	auto[found, line_numbers] = paragraph.contains(Word{"Daddy"});
-//
-//	CHECK(found);
-//	CHECK(vector<int>{1,4,6} == line_numbers);
-//}
+
+/*// Integration test - both Paragraph and File Reader are tested together
+TEST_CASE("File can be read into Paragraph and successfully searched") {
+	// make sure that alice.txt is in the right location for this to work!
+	// it must be in the same directory as the executable
+	auto filereader = FileReader{"alice.txt"};
+	auto paragraph = Paragraph{};
+	filereader.readFileInto(paragraph);
+
+	auto[found, line_numbers] = paragraph.contains(Word{"Daddy"});
+
+	CHECK(found);
+	CHECK(vector<int>{1,4,6} == line_numbers);
+}*/
