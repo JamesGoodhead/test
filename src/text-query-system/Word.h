@@ -8,6 +8,7 @@ using namespace std;
 class WordContainsNoLetters {};
 class WordContainsSpace {};
 
+const auto MIN_SIZE_FOR_QUERY = 3;
 
 class Word
 {
@@ -24,7 +25,10 @@ public:
 	bool isQueryable() const;
 
 private:	
-	string word_;	
+	string word_;
+	 void toLowerCase(string& word);
+	 void removePunctuation(string& word);
+	 
 };
 
 #endif

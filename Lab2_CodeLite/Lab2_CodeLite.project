@@ -3,6 +3,13 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
+    <File Name="../src/text-query-system/Paragraph.h"/>
+    <File Name="../src/text-query-system/Paragraph.cpp"/>
+    <File Name="../src/text-query-system/Line.h"/>
+    <File Name="../src/text-query-system/Line.cpp"/>
+    <File Name="../src/text-query-system/WordJames.cpp"/>
+    <File Name="../src/text-query-system/Word.h"/>
+    <File Name="../src/text-query-system/TextQueryTestsJames.cpp"/>
     <File Name="../src/vector/size_capacity.cpp"/>
     <File Name="main.cpp"/>
   </VirtualDirectory>
