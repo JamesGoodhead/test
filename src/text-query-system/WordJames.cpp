@@ -16,11 +16,6 @@ Word::Word(const string& word): word_{word}
 	//cout<< word_ << endl;
 	 removePunctuation(word_);
 	
-	/*for (auto p = begin(word_); p!= end(word_); ++p)
-    {cout << ' ' << *p;}
-	cout <<""<< endl;
-	cout<< end(word_)-begin(word_)<< endl;*/
-	
     // throws an exception (in the form of WordContainsNoLetters object)
     // indicating that the word being constructed contains no letters
     if (word_.empty()) throw WordContainsNoLetters{};
@@ -31,8 +26,7 @@ Word::Word(const string& word): word_{word}
 // overloads the equivalence operator which allows to Words to be compared using ==
 bool Word::operator==(const Word& rhs) const
 {
-    //transform(word_.begin(),word_.end(),word_.begin(),tolower);
-    //transform(begin(rhs.word_),end(rhs.word_),begin(rhs.word_),tolower);
+    
     if (word_ == rhs.word_)
         return true;
     else
