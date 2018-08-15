@@ -18,14 +18,14 @@ Line::Line(const string& line)
 	vector<string> templine;
 	split(templine, line," ");
 	make_line(templine);
-	//transform(begin(templine),end(templine),begin(line_), ::Word ); not sure why this does not work
+	//transform(begin(templine),end(templine),begin(line_), Word );// not sure why this does not work
 	
 	
 }
 
 bool Line::contains(const Word& search_word) const
 {
-	if(line_.size() == 0 || !search_word.isQueryable()){return false;}
+	if(line_.empty() || !search_word.isQueryable()){return false;}
 	else
 		if(find(begin(line_),end(line_), search_word) != end(line_))
 	{return true;}

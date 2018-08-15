@@ -109,26 +109,63 @@ TEST_CASE("Words are found irrespective of surrounding punctuation") {
 TEST_CASE("Word which is not queryable cannot be found") {
    auto line = Line{"Any fool can write code that a computer can understand. Good programmers write code that humans can understand."};   
   CHECK_FALSE(line.contains(Word{"a"}));
+  //cout<< "test"<< endl;
 }
 
 // ------------- Tests for Paragraph ----------------
 
-//TEST_CASE("Word cannot be found in empty Paragraph") {
-//}
+TEST_CASE("Word cannot be found in empty Paragraph") {
+	auto pargr = Paragraph();
+	pargr.addLine(Line(""));
+	auto[cont_bool, pargr_vec] = pargr.contains((Word{"hello"}));
+   CHECK_FALSE(cont_bool);
+   CHECK(pargr_vec.size() == 0);
+}
 //
-//TEST_CASE("Word not present in Paragraph cannot be found") {
-//}
+TEST_CASE("Word not present in Paragraph cannot be found") {
+	auto paragr = Paragraph();
+	paragr.addLine(Line("This is a test to check if all the word and added to the line vector"));
+	auto[cont_bool,paragr_vec] = paragr.contains((Word{"hellow"}));
+	CHECK_FALSE(cont_bool);
+	CHECK(paragr_vec.size()== 0);
+}
+
+TEST_CASE("Line number of a Word appearing once in Paragraph is returned") {
+	auto paragr = Paragraph();
+	paragr.addLine(Line("This is a test to check if all the word and added to the line vector"));
+	auto[cont_bool, paragr_vec] = paragr.contains((Word{"test"}));
+	CHECK(cont_bool);
+	CHECK(paragr_vec.size() == 1);
+	CHECK(paragr_vec[0] == 1); // the first line is defined and line 1
+}
+
+TEST_CASE("Line numbers of a Word appearing in multiple Lines of a Paragraph is returned") {
+	auto paragr = Paragraph();
+	paragr.addLine(Line("This is a test to check if all the word and added to the line vector"));
+	paragr.addLine(Line("This is a second line to check if all the word are added to the line vector"));
+	paragr.addLine(Line("This is a third line test to check if all the word are added to the line vector"));
+	auto[cont_bool, paragr_vec] = paragr.contains((Word{"test"}));
+	CHECK(cont_bool);
+	CHECK(paragr_vec.size() == 2);
+	CHECK(paragr_vec[0] == 1); 
+	CHECK(paragr_vec[1] == 3);  
+}
 //
-//TEST_CASE("Line number of a Word appearing once in Paragraph is returned") {
-//}
-//
-//TEST_CASE("Line numbers of a Word appearing in multiple Lines of a Paragraph is returned") {
-//}
-//
-//TEST_CASE("Line numbers returned account for an empty Line") {
-//// If the first line of the paragraph is empty, and the word being searched for
-//// is on the second line, the vector returned should be: [2]
-//}
+TEST_CASE("Line numbers returned account for an empty Line") {
+// If the first line of the paragraph is empty, and the word being searched for
+// is on the second line, the vector returned should be: [2]
+
+	auto paragr = Paragraph();
+	paragr.addLine(Line(""));
+	paragr.addLine(Line("This is a second line test to check if all the word are added to the line vector"));
+	paragr.addLine(Line("This is a third line test to check if all the word are added to the line vector"));
+	auto[cont_bool, paragr_vec] = paragr.contains((Word{"test"}));
+	CHECK(cont_bool);
+	CHECK(paragr_vec.size() == 2);
+	CHECK(paragr_vec[0] == 2);  
+	CHECK(paragr_vec[1] == 3);  
+
+}
 //
 //// Integration test - both Paragraph and File Reader are tested together
 //TEST_CASE("File can be read into Paragraph and successfully searched") {

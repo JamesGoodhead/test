@@ -49,6 +49,6 @@ void Word::toLowerCase(string& word)
 {
 	 auto it_end = remove_if(begin(word),end(word),::ispunct);
 	 int word_size = it_end - begin(word);
-	 word = word.substr(0,word_size);
+	  word.resize(word_size);
 	 //return word;
 }
