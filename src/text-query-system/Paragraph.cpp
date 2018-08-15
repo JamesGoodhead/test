@@ -30,7 +30,7 @@ tuple<bool, vector<int>> Paragraph::contains(const Word& search_word) const
 			{
 				cont_pos.push_back((int) pos +1 );
 				cont = true;
-				cout<< cont_pos.size() << " Size of cont_pos vector" <<endl;
+				//cout<< cont_pos.size() << " Size of cont_pos vector" <<endl;
 			}
 		pos++;
 	}

@@ -3,13 +3,18 @@
 // -------------------------------------------
 
 #include "FileReader.h"
+#include <iostream>
+
+using namespace std;
+
 
 FileReader::FileReader(const string& file_name): infile_{file_name.c_str()}
 {
 	// in infile's constructor (called above in the memberwise initialisation list)
 	// the input file stream is associated with a text file
-	if ( !infile_ )
-		throw FileCannotBeOpened();
+	if ( !infile_){
+	//cout<< "test this is the problem"<<endl;
+	throw FileCannotBeOpened();}
 }
 
 void FileReader::readFileInto(Paragraph& file_receiver)

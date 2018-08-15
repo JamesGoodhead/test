@@ -3,6 +3,10 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
+    <File Name="../src/text-query-system/alice.txt"/>
+    <File Name="../src/text-query-system/Text_Query_Program.cpp"/>
+    <File Name="../src/text-query-system/FileReader.h"/>
+    <File Name="../src/text-query-system/FileReader.cpp"/>
     <File Name="../src/text-query-system/Paragraph.h"/>
     <File Name="../src/text-query-system/Paragraph.cpp"/>
     <File Name="../src/text-query-system/Line.h"/>

@@ -1,4 +1,4 @@
-#include "Word.h"
+/*#include "Word.h"
 #include "Line.h"
 #include "Paragraph.h"
 #include "FileReader.h"
@@ -168,7 +168,7 @@ TEST_CASE("Line numbers returned account for an empty Line") {
 	CHECK(paragr_vec[1] == 3);  
 }
 
-/*// Integration test - both Paragraph and File Reader are tested together
+// Integration test - both Paragraph and File Reader are tested together
 TEST_CASE("File can be read into Paragraph and successfully searched") {
 	// make sure that alice.txt is in the right location for this to work!
 	// it must be in the same directory as the executable
@@ -177,7 +177,7 @@ TEST_CASE("File can be read into Paragraph and successfully searched") {
 	filereader.readFileInto(paragraph);
 
 	auto[found, line_numbers] = paragraph.contains(Word{"Daddy"});
-
+	//cout<< line_numbers.size()<< endl;
 	CHECK(found);
 	CHECK(vector<int>{1,4,6} == line_numbers);
 }*/
