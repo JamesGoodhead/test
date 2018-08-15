@@ -149,7 +149,8 @@ TEST_CASE("Line numbers of a Word appearing in multiple Lines of a Paragraph is 
 	CHECK(paragr_vec.size() == 2);
 	CHECK(paragr_vec[0] == 1); 
 	CHECK(paragr_vec[1] == 3);  
-	// this is a comment
+	// This is a comment
+	// This is another comment
 }
 //
 TEST_CASE("Line numbers returned account for an empty Line") {

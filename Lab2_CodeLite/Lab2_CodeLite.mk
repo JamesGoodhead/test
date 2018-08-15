@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=James
-Date                   :=12/08/2018
+Date                   :=15/08/2018
 CodeLitePath           :="C:/Program Files/CodeLite"
 LinkerName             :=C:/mingw64/bin/g++.exe
 SharedObjectLinkerName :=C:/mingw64/bin/g++.exe -shared -fPIC
@@ -62,7 +62,7 @@ AS       := C:/mingw64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/up_src_text-query-system_Paragraph.cpp$(ObjectSuffix) $(IntermediateDirectory)/up_src_text-query-system_Line.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/up_src_vector_size_capacity.cpp$(ObjectSuffix) $(IntermediateDirectory)/up_src_text-query-system_WordJames.cpp$(ObjectSuffix) $(IntermediateDirectory)/up_src_text-query-system_TextQueryTestsJames.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/up_src_text-query-system_Paragraph.cpp$(ObjectSuffix) $(IntermediateDirectory)/up_src_text-query-system_TextQueryTestsJames.cpp$(ObjectSuffix) $(IntermediateDirectory)/up_src_vector_size_capacity.cpp$(ObjectSuffix) $(IntermediateDirectory)/up_src_text-query-system_WordJames.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/up_src_text-query-system_Line.cpp$(ObjectSuffix) 
 
 
 
@@ -101,21 +101,13 @@ $(IntermediateDirectory)/up_src_text-query-system_Paragraph.cpp$(DependSuffix): 
 $(IntermediateDirectory)/up_src_text-query-system_Paragraph.cpp$(PreprocessSuffix): ../src/text-query-system/Paragraph.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/up_src_text-query-system_Paragraph.cpp$(PreprocessSuffix) ../src/text-query-system/Paragraph.cpp
 
-$(IntermediateDirectory)/up_src_text-query-system_Line.cpp$(ObjectSuffix): ../src/text-query-system/Line.cpp $(IntermediateDirectory)/up_src_text-query-system_Line.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/James/Documents/CodeLite/SoftDev/Lab2/src/text-query-system/Line.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/up_src_text-query-system_Line.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/up_src_text-query-system_Line.cpp$(DependSuffix): ../src/text-query-system/Line.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/up_src_text-query-system_Line.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/up_src_text-query-system_Line.cpp$(DependSuffix) -MM ../src/text-query-system/Line.cpp
+$(IntermediateDirectory)/up_src_text-query-system_TextQueryTestsJames.cpp$(ObjectSuffix): ../src/text-query-system/TextQueryTestsJames.cpp $(IntermediateDirectory)/up_src_text-query-system_TextQueryTestsJames.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/James/Documents/CodeLite/SoftDev/Lab2/src/text-query-system/TextQueryTestsJames.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/up_src_text-query-system_TextQueryTestsJames.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/up_src_text-query-system_TextQueryTestsJames.cpp$(DependSuffix): ../src/text-query-system/TextQueryTestsJames.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/up_src_text-query-system_TextQueryTestsJames.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/up_src_text-query-system_TextQueryTestsJames.cpp$(DependSuffix) -MM ../src/text-query-system/TextQueryTestsJames.cpp
 
-$(IntermediateDirectory)/up_src_text-query-system_Line.cpp$(PreprocessSuffix): ../src/text-query-system/Line.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/up_src_text-query-system_Line.cpp$(PreprocessSuffix) ../src/text-query-system/Line.cpp
-
-$(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp $(IntermediateDirectory)/main.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/James/Documents/CodeLite/SoftDev/Lab2/Lab2_CodeLite/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/main.cpp$(DependSuffix): main.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM main.cpp
-
-$(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
+$(IntermediateDirectory)/up_src_text-query-system_TextQueryTestsJames.cpp$(PreprocessSuffix): ../src/text-query-system/TextQueryTestsJames.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/up_src_text-query-system_TextQueryTestsJames.cpp$(PreprocessSuffix) ../src/text-query-system/TextQueryTestsJames.cpp
 
 $(IntermediateDirectory)/up_src_vector_size_capacity.cpp$(ObjectSuffix): ../src/vector/size_capacity.cpp $(IntermediateDirectory)/up_src_vector_size_capacity.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/James/Documents/CodeLite/SoftDev/Lab2/src/vector/size_capacity.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/up_src_vector_size_capacity.cpp$(ObjectSuffix) $(IncludePath)
@@ -133,13 +125,21 @@ $(IntermediateDirectory)/up_src_text-query-system_WordJames.cpp$(DependSuffix): 
 $(IntermediateDirectory)/up_src_text-query-system_WordJames.cpp$(PreprocessSuffix): ../src/text-query-system/WordJames.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/up_src_text-query-system_WordJames.cpp$(PreprocessSuffix) ../src/text-query-system/WordJames.cpp
 
-$(IntermediateDirectory)/up_src_text-query-system_TextQueryTestsJames.cpp$(ObjectSuffix): ../src/text-query-system/TextQueryTestsJames.cpp $(IntermediateDirectory)/up_src_text-query-system_TextQueryTestsJames.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/James/Documents/CodeLite/SoftDev/Lab2/src/text-query-system/TextQueryTestsJames.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/up_src_text-query-system_TextQueryTestsJames.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/up_src_text-query-system_TextQueryTestsJames.cpp$(DependSuffix): ../src/text-query-system/TextQueryTestsJames.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/up_src_text-query-system_TextQueryTestsJames.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/up_src_text-query-system_TextQueryTestsJames.cpp$(DependSuffix) -MM ../src/text-query-system/TextQueryTestsJames.cpp
+$(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp $(IntermediateDirectory)/main.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/James/Documents/CodeLite/SoftDev/Lab2/Lab2_CodeLite/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/main.cpp$(DependSuffix): main.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM main.cpp
 
-$(IntermediateDirectory)/up_src_text-query-system_TextQueryTestsJames.cpp$(PreprocessSuffix): ../src/text-query-system/TextQueryTestsJames.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/up_src_text-query-system_TextQueryTestsJames.cpp$(PreprocessSuffix) ../src/text-query-system/TextQueryTestsJames.cpp
+$(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
+
+$(IntermediateDirectory)/up_src_text-query-system_Line.cpp$(ObjectSuffix): ../src/text-query-system/Line.cpp $(IntermediateDirectory)/up_src_text-query-system_Line.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/James/Documents/CodeLite/SoftDev/Lab2/src/text-query-system/Line.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/up_src_text-query-system_Line.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/up_src_text-query-system_Line.cpp$(DependSuffix): ../src/text-query-system/Line.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/up_src_text-query-system_Line.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/up_src_text-query-system_Line.cpp$(DependSuffix) -MM ../src/text-query-system/Line.cpp
+
+$(IntermediateDirectory)/up_src_text-query-system_Line.cpp$(PreprocessSuffix): ../src/text-query-system/Line.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/up_src_text-query-system_Line.cpp$(PreprocessSuffix) ../src/text-query-system/Line.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
